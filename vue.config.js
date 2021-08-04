@@ -7,12 +7,6 @@
 const path = require('path');
 const fs = require('fs');
 
-const sourceFile = __dirname + '/build/auth.js.example';
-const targetFile = __dirname + '/build/auth.js';
-if (!fs.existsSync(targetFile)) {
-    fs.copyFileSync(sourceFile, targetFile);
-}
-
 function resolve(dir) {
     return path.join(__dirname, dir);
 }

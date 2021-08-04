@@ -297,6 +297,7 @@ export default defineComponent({
             width: ~'calc(100% / 2.2)';
             margin-left: ~'calc(-100% / 4.4)';
             transform: scale(2.2, 1);
+            mask-image: radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
         }
     }
     .bg-wrap {

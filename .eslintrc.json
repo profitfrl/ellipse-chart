@@ -1,0 +1,9 @@
+{
+    "rules": {
+        // fix: Expected the component literal to be directly exported
+        "require-direct-export": "off",
+        "vue/require-direct-export": ["error", {
+            "disallowFunctionalComponentFunction": false
+        }]
+    }
+}

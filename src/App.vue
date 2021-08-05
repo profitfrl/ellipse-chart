@@ -122,18 +122,19 @@ export default defineComponent({
         const calcCoordinates = (a: number, b: number, angle: number): ObjectKeys => {
             // 圆心角方式计算，优点角度无误差，但是弧长分布不均匀
             // 矢量计算中都是以弧度作为计量单位, 弧度= 角度 * Math.PI/180
-            // const radian = (angle - 90) * Math.PI / 180;
-            // const r = a * b / (Math.sqrt(Math.pow(b * Math.cos(radian), 2)
-            //     + Math.pow(a * Math.sin(radian), 2)));
-            // const x = r * Math.cos(radian) + a;
-            // const y = r * Math.sin(radian) + b;
+            // 初始值（起点）为12点钟方向, 角度 - 90
+            const radian = (angle - 90) * Math.PI / 180;
+            const r = a * b / (Math.sqrt(Math.pow(b * Math.cos(radian), 2)
+                + Math.pow(a * Math.sin(radian), 2)));
+            const x = r * Math.cos(radian) + a;
+            const y = r * Math.sin(radian) + b;
             // 离心角方式计算，弧长分布相对均匀但是角度有误差
             // 矢量计算中都是以弧度作为计量单位, 弧度= 角度 * Math.PI/180
             // 初始值（起点）为12点钟方向，圆心的坐标为（r, r1)
-            const radian = angle * Math.PI / 180;
-            const x = a + Math.sin(radian) * a;
-            // 此处是'-'号，因为我们要得到的Y是相对于（0,0）而言的
-            const y = b - Math.cos(radian) * b;
+            // const radian = angle * Math.PI / 180;
+            // const x = a + Math.sin(radian) * a;
+            // // 此处是'-'号，因为我们要得到的Y是相对于（0,0）而言的
+            // const y = b - Math.cos(radian) * b;
             return {x, y};
         };
         // el:挂载容器

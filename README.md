@@ -14,7 +14,7 @@ npm run lint [--fix]
 
 ### 帮助文档
 - [Vue CLI](https://cli.vuejs.org/)
-- [掘金地址](https://juejin.cn/post/6992428387960619044/)
+- [实现解析](https://juejin.cn/post/6992428387960619044/)
 
 ### 参考文章
 - [椭圆参数方程中的θ](https://www.shuzhiduo.com/A/WpdKn84A5V/)
